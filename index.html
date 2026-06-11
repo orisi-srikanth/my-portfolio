@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <!-- Modern Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Cropper.js for Image Cropping -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Orisi<span>Srikanth</span></a>
+            <nav class="nav-links">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="icon-btn theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-link">Home</a></li>
+                <li><a href="#about" class="mobile-link">About</a></li>
+                <li><a href="#projects" class="mobile-link">Projects</a></li>
+                <li><a href="#certifications" class="mobile-link">Certifications</a></li>
+                <li><a href="#experience" class="mobile-link">Experience</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content fade-in">
+                    <span class="hero-greeting">Hello.</span>
+                    <h1 class="hero-title">I'm <span class="accent-text">Orisi Srikanth</span></h1>
+                    <h2 class="hero-subtitle">Data Analyst<span class="cursor">|</span></h2>
+                    <p class="hero-description">Transforming data into intelligent solutions with state-of-the-art
+                        machine learning models and robust AI architectures.</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Got a project?</a>
+                        <a href="https://drive.google.com/file/d/1k6tpkv5Rf1_Hdik5xIJUhalY7E9xEyhx/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">My Resume <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper fade-in-delay">
+                    <div class="glowing-ring"></div>
+                    <div class="geometric-shape shape-1"></div>
+                    <div class="geometric-shape shape-2"></div>
+                    <!-- CHANGE YOUR PROFILE PICTURE HERE -->
+                    <!-- Simply update the 'src' to point to any image in your images folder -->
+                    <img src="images/mypic-removebg-preview.png" alt="Orisi Srikanth Profile" class="hero-image"
+                        id="profile-pic">
+
+                    <!-- Feature to upload image directly on webpage -->
+                    <label for="image-upload" class="image-upload-label" title="Change Profile Picture">
+                        <i class="fas fa-camera"></i>
+                        <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                    </label>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-container">
+                    <div class="about-stats slide-in-left">
+                        <div class="stat-card">
+                            <h3 class="stat-number">5+</h3>
+                            <p class="stat-label">Academic Projects</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number">100%</h3>
+                            <p class="stat-label">Passion for AI</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number">B.Tech</h3>
+                            <p class="stat-label">Computer Science ( Data Science )</p>
+                        </div>
+                    </div>
+                    <div class="about-content slide-in-right">
+                        <p class="about-description">
+                            I am a recent graduate and aspiring AI Engineer with a strong foundational knowledge in
+                            machine learning, data structures, and algorithms. I am eager to apply my academic
+                            experience, problem-solving skills, and deep passion for artificial intelligence to build
+                            innovative and scalable solutions in a professional environment.
+                        </p>
+                        <div class="services-list">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-robot"></i></div>
+                                <div class="service-text">
+                                    <h4>Machine Learning Models</h4>
+                                    <p>Predictive analytics and custom model training.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-language"></i></div>
+                                <div class="service-text">
+                                    <h4>NLP Solutions</h4>
+                                    <p>Text analysis, chatbots, and language understanding.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                                <div class="service-text">
+                                    <h4>Data Analytics</h4>
+                                    <p>Deep data exploration and visualization.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">My Skills</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Skills will be dynamically injected here via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="projects-carousel-wrapper">
+                    <button class="carousel-nav-btn prev-btn" id="projects-prev-btn" aria-label="Previous Projects">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="projects-carousel-container" id="projects-carousel-container">
+                        <div class="projects-grid">
+                            <!-- Project 1 -->
+                            <div class="project-card fade-up">
+                                <div class="project-image-wrapper">
+                                    <img src="assets/images/project1.png" alt="Project 1" class="project-image">
+                                    <div class="project-links">
+                                        <a href="#" class="project-btn demo-btn" aria-label="Live Demo"><i
+                                                class="fas fa-external-link-alt"></i></a>
+                                        <a href="#" class="project-btn repo-btn" aria-label="GitHub Repo"><i
+                                                class="fab fa-github"></i></a>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">Predictive Sales Model</h3>
+                                    <p class="project-desc">Academic project: A machine learning model predicting future
+                                        product
+                                        sales based on historical dataset.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Scikit-Learn</span>
+                                        <span class="tech-tag">Pandas</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 2 -->
+                            <div class="project-card fade-up" style="transition-delay: 0.1s;">
+                                <div class="project-image-wrapper">
+                                    <img src="assets/images/ticketmind_thumbnail.png" alt="TicketMind AI"
+                                        class="project-image">
+                                    <div class="project-links">
+                                        <a href="https://orisi-srikanth.github.io/ticketmind-ai/" target="_blank"
+                                            rel="noopener noreferrer" class="project-btn demo-btn"
+                                            aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                        <a href="https://github.com/orisi-srikanth/ticketmind-ai" target="_blank"
+                                            rel="noopener noreferrer" class="project-btn repo-btn"
+                                            aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">TicketMind AI</h3>
+                                    <p class="project-desc">It can analyze a support ticket and return: Category,
+                                        Priority, Sentiment, Department, Urgency, Suggested Response, and Keywords
+                                        Found.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">Vite</span>
+                                        <span class="tech-tag">FastAPI</span>
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">GitHub Actions</span>
+                                        <span class="tech-tag">Render</span>
+                                        <span class="tech-tag">GitHub Pages</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 3 (Placeholder) -->
+                            <div class="project-card fade-up" style="transition-delay: 0.2s;">
+                                <div class="project-image-wrapper">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#" class="project-btn demo-btn" aria-label="Live Demo"><i
+                                                class="fas fa-external-link-alt"></i></a>
+                                        <a href="#" class="project-btn repo-btn" aria-label="GitHub Repo"><i
+                                                class="fab fa-github"></i></a>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title">Sentiment Analysis Bot</h3>
+                                    <p class="project-desc">An NLP pipeline that analyzes tweet sentiment and classifies
+                                        them as
+                                        positive, negative, or neutral.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">NLTK</span>
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Flask</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-nav-btn next-btn" id="projects-next-btn" aria-label="Next Projects">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="cert-slider-layout">
+                    <div class="cert-slider-viewport" id="cert-slider-viewport" style="position: relative;">
+                        <svg class="cert-rope-svg" id="cert-rope-svg"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;">
+                            <path id="rope-path" fill="none" stroke="#ff5a3c" stroke-width="4" stroke-linecap="round" />
+                        </svg>
+                        <div class="certifications-grid" id="certifications-grid">
+                            <!-- Certifications will be dynamically injected here via JS -->
+                        </div>
+                    </div>
+                    <div class="cert-slider-controls">
+                        <button class="cert-nav-btn up-btn" id="certs-up-btn" aria-label="Previous Certification">
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                        <div class="cert-slider-counter" id="cert-slider-counter">01 / 14</div>
+                        <button class="cert-nav-btn down-btn" id="certs-down-btn" aria-label="Next Certification">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section">
+            <div class="container fade-in">
+                <div class="section-header">
+                    <h2 class="section-title">Work Experience</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="experience-container">
+                    <!-- Tab list for companies -->
+                    <div class="experience-tabs" id="experience-tabs">
+                        <button class="tab-btn active" data-index="0">Vault of Codes</button>
+                        <button class="tab-btn" data-index="1">InternPro</button>
+                        <!-- Glowing active tab highlighter indicator -->
+                        <div class="tab-indicator" id="tab-indicator"></div>
+                    </div>
+                    <!-- Detailed cards panel -->
+                    <div class="experience-panels" id="experience-panels">
+                        <!-- Panel 1 (Vault of Codes) -->
+                        <div class="panel-content active" data-index="0">
+                            <h3 class="role-title">AI & Prompt Engineering Intern <span class="company-accent">@ Vault
+                                    of Codes</span></h3>
+                            <span class="role-duration"><i class="far fa-calendar-alt"></i> July 2025 – August 2025 (4
+                                Weeks) &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Online</span>
+                            <p class="role-description"
+                                style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                                Successfully completed a 4-week internship in AI and Prompt Engineering, gaining
+                                practical experience in designing effective prompts and working with modern AI tools.
+                                Actively engaged in hands-on tasks involving prompt optimization, AI model interaction,
+                                and problem-solving using generative AI techniques.
+                            </p>
+                            <div class="role-tech">
+                                <span class="tech-tag">Prompt Engineering</span>
+                                <span class="tech-tag">Generative AI</span>
+                                <span class="tech-tag">AI Tools</span>
+                                <span class="tech-tag">Prompt Optimization</span>
+                                <span class="tech-tag">Model Interaction</span>
+                            </div>
+                        </div>
+                        <!-- Panel 2 (InternPro) -->
+                        <div class="panel-content" data-index="1">
+                            <h3 class="role-title">Data Science Intern <span class="company-accent">@ InternPro</span>
+                            </h3>
+                            <span class="role-duration"><i class="far fa-calendar-alt"></i> June 2025 – July 2025 (6
+                                Weeks) &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Online /
+                                Remote</span>
+                            <p class="role-description"
+                                style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                                Successfully completed a 6-week internship in Data Science, gaining practical experience
+                                in analyzing complex datasets and extracting actionable insights. Actively engaged in
+                                hands-on tasks involving data cleaning, statistical analysis, data visualization, and
+                                applying machine learning algorithms to real-world business problems.
+                            </p>
+                            <div class="role-tech">
+                                <span class="tech-tag">Data Analysis</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Python & SQL</span>
+                                <span class="tech-tag">Data Visualization</span>
+                                <span class="tech-tag">Predictive Modeling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container fade-in">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3 class="contact-heading">Let's build something amazing together.</h3>
+                        <p class="contact-text">We're currently open to new opportunities. Send me a message and let's
+                            discuss your next project!</p>
+                        <div class="social-links">
+                            <a href="https://github.com/orisi-srikanth" target="_blank" rel="noopener noreferrer"
+                                class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/srikanth-orisi-b98092294" target="_blank"
+                                rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Your Email</label>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" name="message" required placeholder=" " rows="5"></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; <span id="year"></span> Orisi Srikanth. All rights reserved.</p>
+            <a href="#home" class="scroll-top" aria-label="Scroll to Top">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Image Cropping Modal -->
+    <div id="crop-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Crop Profile Picture</h3>
+                <span class="close-modal" id="close-crop-modal">&times;</span>
+            </div>
+            <div class="img-container">
+                <img id="image-to-crop" src="" alt="Picture to crop">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="cancel-crop">Cancel</button>
+                <button type="button" class="btn btn-primary" id="apply-crop">Apply Crop</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Cropper.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
