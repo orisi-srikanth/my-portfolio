@@ -13,6 +13,8 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Cropper.js for Image Cropping -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -79,7 +81,11 @@
                     <!-- Simply update the 'src' to point to any image in your images folder -->
                     <img src="images/mypic-removebg-preview.png" alt="Orisi Srikanth Profile" class="hero-image"
                         id="profile-pic">
-
+                    <!-- Feature to upload image directly on webpage -->
+                    <label for="image-upload" class="image-upload-label" title="Change Profile Picture">
+                        <i class="fas fa-camera"></i>
+                        <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                    </label>
 
                 </div>
             </div>
@@ -410,8 +416,27 @@
 
 
 
+    <!-- Image Cropping Modal -->
+    <div id="crop-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Crop Profile Picture</h3>
+                <span class="close-modal" id="close-crop-modal">&times;</span>
+            </div>
+            <div class="img-container">
+                <img id="image-to-crop" src="" alt="Picture to crop">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="cancel-crop">Cancel</button>
+                <button type="button" class="btn btn-primary" id="apply-crop">Apply Crop</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
 
+    <!-- Cropper.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
     <script src="script.js"></script>
 </body>
 
