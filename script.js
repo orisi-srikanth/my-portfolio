@@ -260,6 +260,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedImage = localStorage.getItem('profileImage');
     if (savedImage) {
         profilePic.src = savedImage;
+        // Hide the edit/camera button if the profile picture has already been cropped and saved
+        const uploadLabel = document.querySelector('.image-upload-label');
+        if (uploadLabel) {
+            uploadLabel.style.display = 'none';
+        }
     }
 
     // Function to close modal and cleanup
@@ -331,6 +336,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Update the profile picture on the page
                 profilePic.src = croppedImageDataURL;
+
+                // Hide the edit/camera button once the picture is cropped successfully
+                const uploadLabel = document.querySelector('.image-upload-label');
+                if (uploadLabel) {
+                    uploadLabel.style.display = 'none';
+                }
 
                 // Save to local storage
                 try {
