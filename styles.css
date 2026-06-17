@@ -403,7 +403,6 @@ h6 {
     position: relative;
     z-index: 2;
     transition: transform var(--transition-slow);
-    border: 4px solid var(--accent); /* Premium circular border */
     background: var(--bg-secondary); /* Background color for transparent PNGs */
     box-shadow: var(--shadow-glow); /* Glow effect around the avatar */
 }
