@@ -666,6 +666,7 @@ h6 {
     display: flex;
     flex-wrap: nowrap;
     gap: 2rem;
+    justify-content: center;
 }
 
 .projects-carousel-container .project-card {
