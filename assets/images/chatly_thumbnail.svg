@@ -1,93 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="50%" stop-color="#1e1b4b"/>
-      <stop offset="100%" stop-color="#31104b"/>
+      <stop offset="0%" stop-color="#0c070a"/>
+      <stop offset="50%" stop-color="#180b12"/>
+      <stop offset="100%" stop-color="#0a0508"/>
     </linearGradient>
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ee2a5b"/>
+      <stop offset="100%" stop-color="#c4123f"/>
     </linearGradient>
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6366f1"/>
-      <stop offset="50%" stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#ec4899"/>
-    </linearGradient>
-    <linearGradient id="bubbleUser" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4f46e5"/>
-      <stop offset="100%" stop-color="#7c3aed"/>
-    </linearGradient>
-    <linearGradient id="bubbleAi" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="15" result="blur" />
+    <filter id="glowStar" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="500" fill="url(#bgGrad)"/>
-  
-  <!-- Glowing Orbs -->
-  <circle cx="200" cy="120" r="150" fill="#6366f1" opacity="0.15" filter="url(#glow)"/>
-  <circle cx="650" cy="380" r="180" fill="#ec4899" opacity="0.12" filter="url(#glow)"/>
+  <rect width="1280" height="720" fill="url(#bgGrad)"/>
+  <circle cx="250" cy="360" r="320" fill="#e61c4d" opacity="0.1" filter="url(#glowStar)"/>
 
-  <!-- Main Chat Window Mockup -->
-  <g transform="translate(100, 40)">
-    <!-- Window Outer Shell -->
-    <rect width="600" height="420" rx="16" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <!-- Main Container Grid (Two Cards matching exact screenshot) -->
+  <g transform="translate(140, 100)">
     
-    <!-- Top Bar -->
-    <path d="M 0 16 A 16 16 0 0 1 16 0 L 584 0 A 16 16 0 0 1 600 16 L 600 50 L 0 50 Z" fill="rgba(15, 23, 42, 0.8)"/>
-    <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-    
-    <!-- Window Controls -->
-    <circle cx="25" cy="25" r="6" fill="#ef4444"/>
-    <circle cx="45" cy="25" r="6" fill="#f59e0b"/>
-    <circle cx="65" cy="25" r="6" fill="#10b981"/>
-    
-    <!-- Title / AI Status -->
-    <text x="300" y="31" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Chatly AI Assistant</text>
-    <circle cx="385" cy="26" r="4" fill="#10b981"/>
+    <!-- LEFT CARD: Chatly Info -->
+    <g transform="translate(0, 0)">
+      <rect width="480" height="520" rx="24" fill="#131017" stroke="#2b222d" stroke-width="1.5"/>
+      
+      <!-- Red Star Icon Badge -->
+      <g transform="translate(48, 48)">
+        <rect width="64" height="64" rx="18" fill="url(#brandGrad)"/>
+        <!-- Star Symbol -->
+        <path d="M 32 16 L 35 27 L 46 30 L 35 33 L 32 44 L 29 33 L 18 30 L 29 27 Z" fill="#ffffff"/>
+      </g>
+      
+      <!-- Title & Description -->
+      <text x="240" y="210" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" text-anchor="middle">Chatly</text>
+      <text x="240" y="250" fill="#a49fa5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" text-anchor="middle">Smart chat interface with authentication, memory-ready history,</text>
+      <text x="240" y="275" fill="#a49fa5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" text-anchor="middle">tool display, and modern AI-style UI.</text>
+      
+      <!-- 2x2 Feature Pills -->
+      <!-- Pill 1 -->
+      <g transform="translate(36, 320)">
+        <rect width="196" height="64" rx="14" fill="#1b1722" stroke="#2d2635" stroke-width="1"/>
+        <text x="24" y="38" font-size="18">🔒</text>
+        <text x="52" y="38" fill="#e2dee4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Secure login system</text>
+      </g>
+      
+      <!-- Pill 2 -->
+      <g transform="translate(248, 320)">
+        <rect width="196" height="64" rx="14" fill="#1b1722" stroke="#2d2635" stroke-width="1"/>
+        <text x="20" y="38" font-size="18">🧠</text>
+        <text x="48" y="38" fill="#e2dee4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Memory-ready chat flow</text>
+      </g>
 
-    <!-- Chat Messages Container -->
-    <!-- AI Message 1 -->
-    <g transform="translate(30, 80)">
-      <rect width="40" height="40" rx="12" fill="url(#accentGrad)"/>
-      <!-- Sparkle Icon -->
-      <path d="M 50 20 M 20 10 L 22 17 L 29 19 L 22 21 L 20 28 L 18 21 L 11 19 L 18 17 Z" fill="#ffffff" transform="translate(0, 0)"/>
-      <rect x="52" y="0" width="340" height="55" rx="14" fill="url(#bubbleAi)" stroke="rgba(255,255,255,0.08)"/>
-      <text x="70" y="24" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Hello! I am Chatly AI. How can I help you today?</text>
-      <text x="70" y="42" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Ask me anything about code, writing, or analysis!</text>
+      <!-- Pill 3 -->
+      <g transform="translate(36, 404)">
+        <rect width="196" height="64" rx="14" fill="#1b1722" stroke="#2d2635" stroke-width="1"/>
+        <text x="24" y="38" font-size="18">⚒️</text>
+        <text x="52" y="38" fill="#e2dee4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Tool-aware agent UI</text>
+      </g>
+      
+      <!-- Pill 4 -->
+      <g transform="translate(248, 404)">
+        <rect width="196" height="64" rx="14" fill="#1b1722" stroke="#2d2635" stroke-width="1"/>
+        <text x="24" y="38" font-size="18">⚡</text>
+        <text x="52" y="38" fill="#e2dee4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Clean modern experience</text>
+      </g>
     </g>
 
-    <!-- User Message 1 -->
-    <g transform="translate(180, 160)">
-      <rect width="390" height="48" rx="14" fill="url(#bubbleUser)"/>
-      <text x="20" y="29" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Can you analyze market trends &amp; summarize the data?</text>
+    <!-- RIGHT CARD: Login Form -->
+    <g transform="translate(520, 0)">
+      <rect width="480" height="520" rx="24" fill="#131017" stroke="#2b222d" stroke-width="1.5"/>
+      
+      <!-- Tab Switcher -->
+      <g transform="translate(36, 48)">
+        <rect width="408" height="54" rx="14" fill="#18141f"/>
+        <!-- Active Tab: Login -->
+        <rect x="4" y="4" width="198" height="46" rx="10" fill="url(#brandGrad)"/>
+        <text x="103" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Login</text>
+        <!-- Inactive Tab: Register -->
+        <text x="305" y="32" fill="#7a757e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600" text-anchor="middle">Register</text>
+      </g>
+      
+      <!-- Form Title -->
+      <text x="240" y="160" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800" text-anchor="middle">Welcome back</text>
+      <text x="240" y="195" fill="#8e8992" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" text-anchor="middle">Login to continue using Chatly.</text>
+      
+      <!-- Inputs -->
+      <!-- Username Input -->
+      <g transform="translate(36, 230)">
+        <rect width="408" height="56" rx="12" fill="#18141f" stroke="#29222e" stroke-width="1"/>
+        <text x="20" y="34" fill="#58525c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15">Username</text>
+      </g>
+      
+      <!-- Password Input -->
+      <g transform="translate(36, 304)">
+        <rect width="408" height="56" rx="12" fill="#18141f" stroke="#29222e" stroke-width="1"/>
+        <text x="20" y="34" fill="#58525c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15">Password</text>
+      </g>
+      
+      <!-- Submit Button -->
+      <g transform="translate(36, 385)">
+        <rect width="408" height="56" rx="14" fill="url(#brandGrad)"/>
+        <text x="204" y="34" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Login</text>
+      </g>
+      
+      <!-- Forgot Password Link -->
+      <text x="240" y="475" fill="#ee2a5b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600" text-anchor="middle">Forgot Password?</text>
     </g>
 
-    <!-- AI Message 2 (Typing/Response) -->
-    <g transform="translate(30, 230)">
-      <rect width="40" height="40" rx="12" fill="url(#accentGrad)"/>
-      <path d="M 50 20 M 20 10 L 22 17 L 29 19 L 22 21 L 20 28 L 18 21 L 11 19 L 18 17 Z" fill="#ffffff"/>
-      <rect x="52" y="0" width="460" height="95" rx="14" fill="url(#bubbleAi)" stroke="rgba(255,255,255,0.08)"/>
-      <text x="70" y="26" fill="#6366f1" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⚡ Chatly AI Insights:</text>
-      <text x="70" y="48" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">1. Sales growth increased by 24% month-over-month.</text>
-      <text x="70" y="68" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">2. Customer engagement is highest in AI automation tools.</text>
-      <text x="70" y="85" fill="#10b981" font-family="system-ui, sans-serif" font-size="11">✓ Real-time analysis completed in 0.4s</text>
-    </g>
-
-    <!-- Bottom Input Bar -->
-    <g transform="translate(30, 350)">
-      <rect width="540" height="48" rx="24" fill="#0f172a" stroke="rgba(99, 102, 241, 0.4)" stroke-width="1.5"/>
-      <text x="25" y="29" fill="#64748b" font-family="system-ui, sans-serif" font-size="13">Type your prompt here...</text>
-      <!-- Send Button -->
-      <circle cx="510" cy="24" r="18" fill="url(#accentGrad)"/>
-      <path d="M 504 24 L 514 18 L 510 28 L 507 24 Z" fill="#ffffff"/>
-    </g>
   </g>
 </svg>
